@@ -9,9 +9,19 @@ Board::Board()
   multiplayer = false
 }
 
+//Swaps the symbols of current and opponenet players
 void Board::changeTurn()
 {
-
+  if (current == 'X')
+  {
+    current = 'O';
+    opponent = 'X';
+  }
+  else
+  {
+    current = 'X';
+    opponent = 'O';
+  }
 }
 
 void Board::showBoard();
