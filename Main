@@ -30,8 +30,12 @@ cout << "Will you be playing with another person? Y/N: ";
 cin >> playerAnswer;
 }
 
+//setting multiplaer private member variable according to input
 if (playerAnswer == 'Y' || playerAnswer == 'y') board.setMultiplayer(true);
 else board.setMultiplayer(false);
+
+cout << "\nYou will be playing X. Here is the board:"<<endl;
+board.showBoard();
 
 
 return 0;
