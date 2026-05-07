@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-Class Board
+class Board
 {
 private:
   char current;
