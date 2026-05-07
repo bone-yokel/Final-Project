@@ -60,9 +60,46 @@ void Board::checkGameEnd()
 
 }
 
-void Board::bestMove(char symbol)
+//UNFINISHED
+//finds and makes the best possible move for the entered symbol
+//Bones
+void Board::bestMove()
 {
+	bool moveFound = false;
+	
+    // 1. Take a winning move if possible
+    for (int x = 0; x < 9; x++)
+    {
+        if (boardArray[x] == ' ')
+        {
+            if (isWinning(current, x))
+			{
+				boardArray[x] = current;
+				moveFound = true;
+			}
+        }
+    }
 
+	// 2. Block opponents winning move
+	if (moveFound == false)
+	{
+		for (int x = 0; x < 9; x++)
+    	{
+        	if (boardArray[x] == ' ')
+       		{
+            	if (isWinning(opponent, x))
+				{
+					boardArray[x] = current;
+					moveFound = true;
+				}
+        	}
+    	}
+	}
+	// 3. Create a fork
+	// 4. Block opponent fork
+	// 5. Take center
+	// 6. Take corner
+	// 7. Take edge
 }
 
 //Determines if placing a symbol at a position will win the game
