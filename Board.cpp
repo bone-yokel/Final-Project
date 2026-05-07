@@ -79,10 +79,31 @@ bool Board::isWinning(char symbol, int posistion)
 	return false;
 }
 
-bool Board::isFork(char symbol, int posistion)
+//searches the board to see if a move will create a fork for symbol input
+//Bones
+int Board::findFork(char symbol)
 {
-	//place holder return
-	return false;
+	int winningMoves = 0;
+	for (int x = 0; x < 9; x++)
+    {
+        if (boardArray[x] == ' ')
+        {
+            boardArray[x] = symbol;
+
+			for (int x = 0; x < 9; x++)
+			{
+				if (boardArray[x] == ' ')
+				{
+					if (isWinning(symbol, x) winningMoves++;
+				}
+				if (winningMoves >= 2) return x;
+				else winningMoves = 0;
+			}
+            boardArray[x] = ' ';
+        }
+    }
+	//returning 000 means that no fork was found
+	return 000;
 }
 
 //Bones
