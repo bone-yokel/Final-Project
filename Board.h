@@ -6,7 +6,7 @@ using namespace std;
 class Board
 {
 private:
-  char current;
+	char current;
   char opponent;
   bool multiplayer;
   char boardArray[9];
