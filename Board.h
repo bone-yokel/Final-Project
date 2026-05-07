@@ -7,6 +7,7 @@ private:
   char current;
   char opponent;
   bool multiplayer;
+  char boardArray[9];
 public:
   Board();
   void changeTurn();
