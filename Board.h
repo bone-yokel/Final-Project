@@ -22,7 +22,7 @@ public:
   void showBoard();
   void setMultiplayer(bool b);
   void checkGameEnd();
-  void bestMove(char symbol);
+  void bestMove();
   bool isWinning(char symbol, int posistion);
   int findFork(char symbol);
   void makeMove(int position);
