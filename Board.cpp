@@ -41,9 +41,11 @@ void Board::showBoard();
 	}
 }
 
+//sets the multiplayer private member variable to input
+//Bones
 void Board::setMultiplayer(bool b);
 {
-
+	multiplayer = b;
 }
 
 void Board::checkGameEnd();
