@@ -33,14 +33,19 @@ void Board::changeTurn()
 //Bones
 void Board::showBoard()
 {
-	for (int x = 0; x < 9; x++)
-	{
-		cout << "\t\t|\t\t|\n"
-			<< "\t" << boardArray[x] << "\t|\t" << boardArray[++x] << "\t|\t" << boardArray[++x] << "\t\n"
-			<< "\t\t|\t\t|\n";
-		if (x == 8) cout << "\n\n";
-		else cout << "-----------------------------------------------\n";
-	}
+	cout << "\t\t|\t\t|\n";
+	cout << "\t" << boardArray[0] << "\t|\t" << boardArray[1] << "\t|\t" << boardArray[2] << "\t\n";
+	cout << "\t\t|\t\t|\n";
+	cout << "------------------------------------------------\n";
+	cout << "\t\t|\t\t|\n";
+	cout << "\t" << boardArray[3] << "\t|\t" << boardArray[4] << "\t|\t" << boardArray[5] << "\t\n";
+	cout << "\t\t|\t\t|\n";
+	cout << "------------------------------------------------\n";
+	cout << "\t\t|\t\t|\n";
+	cout << "\t" << boardArray[6] << "\t|\t" << boardArray[7] << "\t|\t" << boardArray[8] << "\t\n";
+	cout << "\t\t|\t\t|\n";
+
+	
 }
 
 //sets the multiplayer private member variable to input
@@ -62,12 +67,14 @@ void Board::bestMove(char symbol)
 
 bool Board::isWinning(char symbol, int posistion)
 {
-
+	//place holder return
+	return false;
 }
 
 bool Board::isFork(char symbol, int posistion)
 {
-
+	//place holder return
+	return false;
 }
 
 //Bones
