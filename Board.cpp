@@ -65,9 +65,17 @@ void Board::bestMove(char symbol)
 
 }
 
+//Determines if placing a symbol at a position will win the game
+//Bones
 bool Board::isWinning(char symbol, int posistion)
 {
-	//place holder return
+	for (int x = 0; x < 8; x++)
+    {
+        if (boardArray[wins[x][0]] == current &&
+            boardArray[wins[x][1]] == current &&
+            boardArray[wins[x][2]] == current  )
+    	return true;
+    }
 	return false;
 }
 
