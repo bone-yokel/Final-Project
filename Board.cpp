@@ -60,7 +60,6 @@ void Board::checkGameEnd()
 
 }
 
-//UNFINISHED
 //finds and makes the best possible move for the current player
 //Bones
 void Board::bestMove()
