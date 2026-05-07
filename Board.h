@@ -11,10 +11,10 @@ public:
   Board();
   void changeTurn();
   void showBoard();
-  void setMultiplayer(bool);
+  void setMultiplayer(bool b);
   void checkGameEnd();
-  void bestMove(char);
-  bool isWinning(char, int);
-  bool isFork(char, int);
-  void makeMove(int);
+  void bestMove(char symbol);
+  bool isWinning(char symbol, int posistion);
+  bool isFork(char symbol, int posistion);
+  void makeMove(int position);
 };
