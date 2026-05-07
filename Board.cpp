@@ -61,14 +61,14 @@ void Board::checkGameEnd()
 }
 
 //UNFINISHED
-//finds and makes the best possible move for the entered symbol
+//finds and makes the best possible move for the current player
 //Bones
 void Board::bestMove()
 {
 	bool moveFound = false;
 	
     // 1. Take a winning move if possible
-    for (int x = 0; x < 9; x++)
+    for (int x = 0; x < 9 && moveFound == false; x++)
     {
         if (boardArray[x] == ' ')
         {
@@ -83,7 +83,7 @@ void Board::bestMove()
 	// 2. Block opponents winning move
 	if (moveFound == false)
 	{
-		for (int x = 0; x < 9; x++)
+		for (int x = 0; x < 9 && moveFound == false; x++)
     	{
         	if (boardArray[x] == ' ')
        		{
@@ -95,11 +95,66 @@ void Board::bestMove()
         	}
     	}
 	}
+	
 	// 3. Create a fork
+	if (moveFound == false)
+	{
+		int forkPosition = findFork(current);
+		if (forkPosition !=  000)
+		{
+			boardArray[forkPosition] = current;
+			moveFound = true;
+		}
+	}
+	
 	// 4. Block opponent fork
+	if (moveFound == false)
+	{
+		int forkPosition = findFork(opponent);
+		if (forkPosition !=  000)
+		{
+			boardArray[forkPosition] = current;
+			moveFound = true;
+		}
+	}
+	
 	// 5. Take center
+	if (moveFound == false)
+	{
+		if (boardArray[4] == ' ')
+		{
+			boardArray[4] = current;
+			moveFound = true;
+		}
+	}
+	
 	// 6. Take corner
+	if (moveFound == false)
+	{
+		int corners[4] = {0, 2, 6, 8};
+	    for (int x = 0; x < 4 && moveFound == false; x++)
+    	{
+       		if (boardArray[corners[x]] == ' ')
+			{
+				boardArray[corners[x]] = current;
+				moveFound = true;
+			}
+    	}
+	}
+	
 	// 7. Take edge
+	if (moveFound == false)
+	{
+	    int edges[4] = {1, 3, 5, 7};
+    	for (int x = 0; x < 4 && moveFound == false; x++)
+   		{
+        	if (boardArray[edges[x]] == ' ')
+			{
+				boardArray[edges[x]] = current;
+				moveFound = true;
+			}
+    	}
+	}
 }
 
 //Determines if placing a symbol at a position will win the game
