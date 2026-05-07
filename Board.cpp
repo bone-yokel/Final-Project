@@ -94,7 +94,7 @@ int Board::findFork(char symbol)
 			{
 				if (boardArray[x] == ' ')
 				{
-					if (isWinning(symbol, x) winningMoves++;
+					if (isWinning(symbol, x)) winningMoves++;
 				}
 				if (winningMoves >= 2) return x;
 				else winningMoves = 0;
