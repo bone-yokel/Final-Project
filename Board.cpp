@@ -27,14 +27,14 @@ void Board::changeTurn()
 
 void Board::showBoard();
 {
-  for (int x = 0; x<9);
-  {
-  cout << "\t\t|\t\t|\n"
-    <<"\t"<<boardArray[x]<<"\t|\t"<<boardArray[++x]<<"\t|\t"<<boardArray[++x]<<"\t\n"
-    << "\t\t|\t\t|\n";
-    if (x==9) cout << "\n\n";
-    else cout <<"--------------------------\n";
-  }
+	for (int x = 0; x < 9; x++)
+	{
+		cout << "\t\t|\t\t|\n"
+			<< "\t" << boardArray[x] << "\t|\t" << boardArray[++x] << "\t|\t" << boardArray[++x] << "\t\n"
+			<< "\t\t|\t\t|\n";
+		if (x == 8) cout << "\n\n";
+		else cout << "-----------------------------------------------\n";
+	}
 }
 
 void Board::setMultiplayer(bool b);
