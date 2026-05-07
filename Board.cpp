@@ -68,7 +68,9 @@ bool Board::isFork(char symbol, int posistion);
 
 }
 
+//Bones
 void Board::makeMove(int position);
 {
-
+	if (boardArray[position] == ' ') boardArray[position] = current;
+	else cout<<"Invalid move"<<endl;
 }
