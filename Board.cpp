@@ -9,7 +9,7 @@ Board::Board()
 {
   current = 'X';
   opponent = 'O';
-  multiplayer = false
+  multiplayer = false;
   for (int x = 0; x<9; x++) boardArray[x] = ' ';
 }
 
