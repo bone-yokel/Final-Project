@@ -24,6 +24,6 @@ public:
   void checkGameEnd();
   void bestMove(char symbol);
   bool isWinning(char symbol, int posistion);
-  bool findFork(char symbol, int posistion);
+  int findFork(char symbol);
   void makeMove(int position);
 };
