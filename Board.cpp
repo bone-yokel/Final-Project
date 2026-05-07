@@ -2,6 +2,7 @@
 #include "Board.h"
 
 //constructor
+//Bones
 Board::Board()
 {
   current = 'X';
@@ -11,6 +12,7 @@ Board::Board()
 }
 
 //Swaps the symbols of current and opponenet players
+//Bones
 void Board::changeTurn()
 {
   if (current == 'X')
@@ -25,6 +27,8 @@ void Board::changeTurn()
   }
 }
 
+//prints the current state of the board
+//Bones
 void Board::showBoard();
 {
 	for (int x = 0; x < 9; x++)
