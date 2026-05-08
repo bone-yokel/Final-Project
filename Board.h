@@ -18,6 +18,7 @@ private:
     };
 public:
   Board();
+  void gameEnd(char result);
   void changeTurn();
   void showBoard();
   void checkGameEnd();
