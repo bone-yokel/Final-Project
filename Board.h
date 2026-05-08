@@ -9,6 +9,7 @@ private:
   char current;
   char opponent;
   bool multiplayer;
+  char playerAnswer;
   char boardArray[9];
   int wins[8][3] =
     {
