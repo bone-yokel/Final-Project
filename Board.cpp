@@ -15,7 +15,21 @@ Board::Board()
 
 void Board::playerCount()
 {
+   //Getting player count
+        cout << "Will you be playing with another person? Y/N: ";
+    cin >> playerAnswer;
 
+    //Making sure input is valid
+    while (playerAnswer != 'Y' && playerAnswer != 'y' && playerAnswer != 'N' && playerAnswer != 'n')
+    {
+        cout << "Sorry, that is an invalid answer. Please enter either 'Y' or 'N'" << endl;
+            cout << "Will you be playing with another person? Y/N: ";
+        cin >> playerAnswer;
+    }
+
+    //setting multiplaer private member variable according to input
+    if (playerAnswer == 'Y' || playerAnswer == 'y') board.setMultiplayer(true);
+    else board.setMultiplayer(false);
 }
 
 //Swaps the symbols of current and opponenet players
