@@ -201,18 +201,19 @@ void Board::bestMove()
 
 //Determines if placing a symbol at a position will win the game
 //Bones
-bool Board::isWinning(char symbol, int posistion)
-{
+bool Board::isWinning(char symbol, int position) {
+	boardArray[position] = symbol;
 	for (int x = 0; x < 8; x++)
     {
         if (boardArray[wins[x][0]] == current &&
             boardArray[wins[x][1]] == current &&
-            boardArray[wins[x][2]] == current  )
+            boardArray[wins[x][2]] == current  ) {
+		boardArray[position] = ' ';
     	return true;
     }
+	boardArray[position] = ' ';
 	return false;
 }
-
 //searches the board to see if a move will create a fork for symbol input
 //Bones
 int Board::findFork(char symbol)
