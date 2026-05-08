@@ -26,5 +26,5 @@ public:
   bool isWinning(char symbol, int posistion);
   int findFork(char symbol);
   void makeMove(int position);
-  void playerCount(char answer);
+  void playerCount();
 };
