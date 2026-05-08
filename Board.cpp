@@ -220,11 +220,11 @@ bool Board::isWinning(char symbol, int position) {
 int Board::findFork(char symbol)
 {
 	int winningMoves = 0;
-	for (int x = 0; x < 9; x++)
+	for (int i = 0; i < 9; i++)
     {
-        if (boardArray[x] == ' ')
+        if (boardArray[i] == ' ')
         {
-            boardArray[x] = symbol;
+            boardArray[i] = symbol;
 
 			for (int x = 0; x < 9; x++)
 			{
