@@ -93,7 +93,7 @@ void Board::checkGameEnd()
            		 boardArray[wins[x][1]] == opponent &&
             	 boardArray[wins[x][2]] == opponent  )
 		{
-		gameEnd(opponent)
+		gameEnd(opponent);
 		gameOver = true;
 		}
     }
