@@ -19,21 +19,8 @@ int main()
     cout << "4) Players may not override or replace any grid slot that has already been filled with a player’s symbol" << endl;
     cout << "5) Players win the game when 3 grid slots containing the player’s symbols align in a row, column, or diagonal across the 3 by 3 grid." << endl << endl;
 
-        //Getting player count
-        cout << "Will you be playing with another person? Y/N: ";
-    cin >> playerAnswer;
-
-    //Making sure input is valid
-    while (playerAnswer != 'Y' && playerAnswer != 'y' && playerAnswer != 'N' && playerAnswer != 'n')
-    {
-        cout << "Sorry, that is an invalid answer. Please enter either 'Y' or 'N'" << endl;
-            cout << "Will you be playing with another person? Y/N: ";
-        cin >> playerAnswer;
-    }
-
-    //setting multiplaer private member variable according to input
-    if (playerAnswer == 'Y' || playerAnswer == 'y') board.setMultiplayer(true);
-    else board.setMultiplayer(false);
+    //Getting player count
+    board.playerCount();
 
     cout << "\nYou will be playing X. Here is the board:" << endl << endl;
     board.showBoard();
