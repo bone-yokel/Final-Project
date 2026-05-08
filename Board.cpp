@@ -83,7 +83,7 @@ void Board::checkGameEnd()
             boardArray[wins[x][1]] == current &&
             boardArray[wins[x][2]] == current  )
 		{
-    	board.gameEnd(current);
+    	gameEnd(current);
 		gameOver = true;
 		}
 			
@@ -91,18 +91,17 @@ void Board::checkGameEnd()
            		 boardArray[wins[x][1]] == opponent &&
             	 boardArray[wins[x][2]] == opponent  )
 		{
-		board.gameEnd(opponent)
+		gameEnd(opponent)
 		gameOver = true;
 		}
     }
-	if (gameOver == 'false')
+	if (!gameOver)
 	{
-		for (int x = 0; x < 8; x++) if (boardArray[x] == 'X' || boardArray[x] == 'O') fullTiles++;
+		for (int x = 0; x <= 8; x++) if (boardArray[x] == 'X' || boardArray[x] == 'O') fullTiles++;
 		if (fullTiles == 9) board.gameEnd('T');
 		fullTiles = 0;
 	}
 }
-
 //finds and makes the best possible move for the current player
 //Bones
 void Board::bestMove()
