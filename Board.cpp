@@ -206,9 +206,9 @@ bool Board::isWinning(char symbol, int position) {
 	boardArray[position] = symbol;
 	for (int x = 0; x < 8; x++)
     {
-        if (boardArray[wins[x][0]] == current &&
-            boardArray[wins[x][1]] == current &&
-            boardArray[wins[x][2]] == current  ) {
+        if (boardArray[wins[x][0]] == symbol &&
+            boardArray[wins[x][1]] == symbol &&
+            boardArray[wins[x][2]] == symbol  ) {
 		boardArray[position] = ' ';
     	return true; }
     }
