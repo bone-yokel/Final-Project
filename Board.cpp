@@ -67,7 +67,7 @@ void Board::showBoard()
 	
 }
 
-void Board::checkGameEnd()
+bool Board::checkGameEnd()
 {
 	for (int x = 0; x < 8; x++)
     {
