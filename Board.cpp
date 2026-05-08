@@ -69,7 +69,13 @@ void Board::showBoard()
 
 void Board::checkGameEnd()
 {
-
+	for (int x = 0; x < 8; x++)
+    {
+        if (boardArray[wins[x][0]] == current &&
+            boardArray[wins[x][1]] == current &&
+            boardArray[wins[x][2]] == current  )
+    	return true;
+    }
 }
 
 //finds and makes the best possible move for the current player
