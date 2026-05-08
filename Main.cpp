@@ -25,6 +25,10 @@ int main()
     cout << "\nYou will be playing X. Here is the board:" << endl << endl;
     board.showBoard();
 
+    bool gameOver = false;
+    int choice;
+
+    while(!gameOver)
 
     return 0;
 }
