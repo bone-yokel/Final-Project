@@ -235,7 +235,7 @@ int Board::findFork(char symbol)
 				if (winningMoves >= 2) return x;
 				else winningMoves = 0;
 			}
-            boardArray[x] = ' ';
+            boardArray[i] = ' ';
         }
     }
 	//returning 000 means that no fork was found
