@@ -209,7 +209,7 @@ bool Board::isWinning(char symbol, int position) {
             boardArray[wins[x][1]] == current &&
             boardArray[wins[x][2]] == current  ) {
 		boardArray[position] = ' ';
-    	return true;
+    	return true; }
     }
 	boardArray[position] = ' ';
 	return false;
