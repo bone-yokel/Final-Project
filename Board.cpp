@@ -13,10 +13,10 @@ Board::Board()
 	for (int x = 0; x < 9; x++) boardArray[x] = ' ';
 }
 
+//gets player count
 void Board::playerCount()
 {
-   //Getting player count
-        cout << "Will you be playing with another person? Y/N: ";
+    cout << "Will you be playing with another person? Y/N: ";
     cin >> playerAnswer;
 
     //Making sure input is valid
@@ -28,8 +28,8 @@ void Board::playerCount()
     }
 
     //setting multiplaer private member variable according to input
-    if (playerAnswer == 'Y' || playerAnswer == 'y') board.setMultiplayer(true);
-    else board.setMultiplayer(false);
+    if (playerAnswer == 'Y' || playerAnswer == 'y') multiplayer = true;
+    else multiplayer = false;
 }
 
 //Swaps the symbols of current and opponenet players
@@ -65,13 +65,6 @@ void Board::showBoard()
 	cout << "\t\t|\t\t|\n";
 
 	
-}
-
-//sets the multiplayer private member variable to input
-//Bones
-void Board::setMultiplayer(bool b)
-{
-	multiplayer = b;
 }
 
 void Board::checkGameEnd()
