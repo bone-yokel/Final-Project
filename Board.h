@@ -20,7 +20,6 @@ public:
   Board();
   void changeTurn();
   void showBoard();
-  void setMultiplayer(bool b);
   void checkGameEnd();
   void bestMove();
   bool isWinning(char symbol, int posistion);
