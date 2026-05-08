@@ -69,7 +69,9 @@ void Board::showBoard()
 
 void Board::gameEnd(char result)
 {
-
+	if (result == 'X') cout << endl << "X won the game!";
+	else if (result == 'O') cout << endl << "O won the game!";
+	else cout << endl << "The game ended in a draw!";
 }
 
 //uhh not 100 % sure this gon work
