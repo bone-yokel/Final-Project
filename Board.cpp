@@ -67,6 +67,11 @@ void Board::showBoard()
 	
 }
 
+void Board::gameEnd(char result)
+{
+
+}
+
 //uhh not 100 % sure this gon work
 void Board::checkGameEnd()
 {
