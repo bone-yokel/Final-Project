@@ -13,6 +13,11 @@ Board::Board()
 	for (int x = 0; x < 9; x++) boardArray[x] = ' ';
 }
 
+void Board::playerCount()
+{
+
+}
+
 //Swaps the symbols of current and opponenet players
 //Bones
 void Board::changeTurn()
