@@ -67,15 +67,35 @@ void Board::showBoard()
 	
 }
 
-bool Board::checkGameEnd()
+//uhh not 100 % sure this gon work
+void Board::checkGameEnd()
 {
-	for (int x = 0; x < 8; x++)
+	bool gameOver = false;
+	int fullTiles = 0;
+	for (int x = 0; x < 8 && gameOver == false; x++)
     {
         if (boardArray[wins[x][0]] == current &&
             boardArray[wins[x][1]] == current &&
             boardArray[wins[x][2]] == current  )
-    	return true;
+		{
+    	board.gameEnd(current);
+		gameOver = true;
+		}
+			
+		else if (boardArray[wins[x][0]] == opponent &&
+           		 boardArray[wins[x][1]] == opponent &&
+            	 boardArray[wins[x][2]] == opponent  )
+		{
+		board.gameEnd(opponent)
+		gameOver = true;
+		}
     }
+	if (gameOver == 'false')
+	{
+		for (int x = 0; x < 8; x++) if (boardArray[x] == 'X' || boardArray[x] == 'O') fullTiles++;
+		if (fullTiles == 9) board.gameEnd('T');
+		fullTiles = 0;
+	}
 }
 
 //finds and makes the best possible move for the current player
