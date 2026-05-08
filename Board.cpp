@@ -100,7 +100,7 @@ void Board::checkGameEnd()
 	if (!gameOver)
 	{
 		for (int x = 0; x <= 8; x++) if (boardArray[x] == 'X' || boardArray[x] == 'O') fullTiles++;
-		if (fullTiles == 9) board.gameEnd('T');
+		if (fullTiles == 9) gameEnd('T');
 		fullTiles = 0;
 	}
 }
