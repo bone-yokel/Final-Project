@@ -219,27 +219,28 @@ bool Board::isWinning(char symbol, int position) {
 //Bones
 int Board::findFork(char symbol)
 {
-	int winningMoves = 0;
-	for (int i = 0; i < 9; i++)
+    for (int i = 0; i < 9; i++)
     {
         if (boardArray[i] == ' ')
         {
             boardArray[i] = symbol;
+            int winningMoves = 0;
 
-			for (int x = 0; x < 9; x++)
-			{
-				if (boardArray[x] == ' ')
-				{
-					if (isWinning(symbol, x)) winningMoves++;
-				}
-				if (winningMoves >= 2) return i;
-				else winningMoves = 0;
-			}
-            boardArray[i] = ' ';
+            for (int x = 0; x < 9; x++)
+            {
+                if (boardArray[x] == ' ')
+                {
+                    if (isWinning(symbol, x)) winningMoves++;
+                }
+            }
+
+            boardArray[i] = ' '; // resetting
+
+            if (winningMoves >= 2) return i; // return after checking all x spots
         }
     }
-	//returning 0 means that no fork was found
-	return 0;
+    return -1; // return -1 to indicate no fork being found
+}
 }
 
 //Bones
