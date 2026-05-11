@@ -232,14 +232,14 @@ int Board::findFork(char symbol)
 				{
 					if (isWinning(symbol, x)) winningMoves++;
 				}
-				if (winningMoves >= 2) return x;
+				if (winningMoves >= 2) return i;
 				else winningMoves = 0;
 			}
             boardArray[i] = ' ';
         }
     }
-	//returning 000 means that no fork was found
-	return 000;
+	//returning 0 means that no fork was found
+	return 0;
 }
 
 //Bones
