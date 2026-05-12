@@ -38,8 +38,10 @@ void Board::playerCount()
     else multiplayer = false;
 }
 
-//Swaps the symbols of current and opponenet players
-//Srujan
+/*
+* void function that swaps the symbols of the two players to signify the end of their turn
+* -Srujan
+*/
 void Board::changeTurn()
 {
 	if (current == 'X')
