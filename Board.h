@@ -20,6 +20,7 @@ private:
 public:
   Board();
   void getMultiplayer() {return multiplayer;}
+  void getCurrent() {return current;}
   void gameEnd(char result);
   void changeTurn();
   void showBoard();
