@@ -124,8 +124,11 @@ void Board::checkGameEnd()
 		fullTiles = 0;
 	}
 }
-//finds and makes the best possible move for the current player
-//Bones
+
+/*
+* void function the finds and makes the best possible move, using a series of 7 steps, for the current player
+* -Bones
+*/
 void Board::bestMove()
 {
 	bool moveFound = false;
