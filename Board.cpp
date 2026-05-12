@@ -244,7 +244,6 @@ int Board::findFork(char symbol)
     }
     return 000; // return -1 to indicate no fork being found
 }
-}
 
 //Bones
 void Board::makeMove(int position)
