@@ -68,7 +68,7 @@ int main()
             gameOver = false;
             //reset booard
             for (int c = 0; c <= 8; c++) {
-                getboardArray(c) = ' ';
+                resetboardArray(c);
             }
         }
         else {
