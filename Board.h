@@ -19,8 +19,8 @@ private:
     };
 public:
   Board();
-  void getMultiplayer() {return multiplayer;}
-  void getCurrent() {return current;}
+  bool getMultiplayer() {return multiplayer;}
+  char getCurrent() {return current;}
   void gameEnd(char result);
   void changeTurn();
   void showBoard();
