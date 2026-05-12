@@ -59,6 +59,19 @@ int main()
         board.checkGameEnd();
         // Move on with the turn
         board.changeTurn();
+
+        char response;
+        cout << "Do you wish to play another game? (y/n): "
+        cin >> response;
+
+        if (response == 'y' || response == 'Y') {
+            gameOver = false;
+            //reset booard?
+        }
+        else {
+        gameover = true;
+        cout << "Thanks for playing!" << endl;
+        }
     }
 
     return 0;
