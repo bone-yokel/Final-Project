@@ -227,8 +227,13 @@ bool Board::isWinning(char symbol, int position) {
 	boardArray[position] = ' ';
 	return false;
 }
-//searches the board to see if a move will create a fork for symbol input
-//Bones
+
+/*
+* int function that searches the board to see if a move will create a fork
+* takes char symbol argument
+* returns int based on the position of possible fork
+* -Bones
+*/
 int Board::findFork(char symbol)
 {
 	for (int i = 0; i < 9; i++)
