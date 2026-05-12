@@ -35,7 +35,7 @@ int main()
     {
         if (board.getMultiplayer() || (!board.getMultiplayer() && board.getCurrent() == 'X'))
         {
-            cout << "\nPlayer " << board.current << ", enter your move (0-8): ";
+            cout << "\nPlayer " << board.getCurrent() << ", enter your move (0-8): ";
             cin >> choice;
 
             // validation to make sure the spot is on the board
