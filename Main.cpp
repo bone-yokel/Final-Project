@@ -28,7 +28,40 @@ int main()
     bool gameOver = false;
     int choice;
 
-    while(!gameOver)
+    /*
+    Checks to see if the game is over.
+    Figures out what the game will be and who's playing. Then, it will go through turns and check for a win until someone wins oor a draw happens.
+    Srujna
+    */
+    while (!gameOver)
+    {
+        if (board.multiplayer || (!board.multiplayer && board.current == 'X'))
+        {
+            cout << "\nPlayer " << board.current << ", enter your move (0-8): ";
+            cin >> choice;
+
+            // validation to make sure the spot is on the board
+            if (choice < 0 || choice > 8) {
+                cout << "Invalid spot! Please choose 0-8." << endl;
+                continue; 
+            }
+            
+            board.makeMove(choice);
+        }
+        else
+        {
+            // Computer turn
+            cout << "\nComputer (O) is thinking..." << endl;
+            board.bestMove();
+        }
+
+        // Gotta show the user the board
+        board.showBoard();
+        //check for game end
+        board.checkGameEnd();
+        // Move on with the turn
+        board.changeTurn();
+    }
 
     return 0;
 }
