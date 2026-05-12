@@ -91,8 +91,10 @@ void Board::gameEnd(char result)
 	else cout << endl << "The game ended in a draw!";
 }
 
-//Cheks if the game has ended and passes for who wins
-//Srujan
+/*
+* void function that checks the board to see if the game is over
+* -Srujan
+*/
 void Board::checkGameEnd()
 {
 	bool gameOver = false;
