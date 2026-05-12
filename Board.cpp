@@ -15,7 +15,11 @@ Board::Board()
 	for (int x = 0; x < 9; x++) boardArray[x] = ' ';
 }
 
-//gets player count
+/*
+* void function to get player count from user,
+* validates input
+* -Ross
+*/
 void Board::playerCount()
 {
     cout << "Will you be playing with another person? Y/N: ";
