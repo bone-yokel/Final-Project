@@ -254,7 +254,11 @@ int Board::findFork(char symbol)
 	return 000; // return -1 to indicate no fork being found
 }
 
-//Bones
+/*
+* void function that validates move input
+* takes int position argument
+* -Bones
+*/
 void Board::makeMove(int position)
 {
 	if (boardArray[position] == ' ') boardArray[position] = current;
