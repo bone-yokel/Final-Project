@@ -33,7 +33,7 @@ void Board::playerCount()
 }
 
 //Swaps the symbols of current and opponenet players
-//Bones
+//Srujan
 void Board::changeTurn()
 {
 	if (current == 'X')
@@ -74,7 +74,8 @@ void Board::gameEnd(char result)
 	else cout << endl << "The game ended in a draw!";
 }
 
-//uhh not 100 % sure this gon work
+//Cheks if the game has ended and passes for who wins
+//Srujan
 void Board::checkGameEnd()
 {
 	bool gameOver = false;
