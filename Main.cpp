@@ -66,7 +66,10 @@ int main()
 
         if (response == 'y' || response == 'Y') {
             gameOver = false;
-            //reset booard?
+            //reset booard
+            for (int c = 0; c <= 8; c++) {
+                boardArray[c] = ' ';
+            }
         }
         else {
         gameover = true;
