@@ -52,15 +52,17 @@ void Board::changeTurn()
 //Bones
 void Board::showBoard()
 {
-	cout << "\t\t|\t\t|\n";
+	cout << "0\t\t|1\t\t|2\n"; // numbering for the top row
 	cout << "\t" << boardArray[0] << "\t|\t" << boardArray[1] << "\t|\t" << boardArray[2] << "\t\n";
 	cout << "\t\t|\t\t|\n";
 	cout << "------------------------------------------------\n";
-	cout << "\t\t|\t\t|\n";
+	
+	cout << "3\t\t|4\t\t|5\n"; // numbering for the middle row
 	cout << "\t" << boardArray[3] << "\t|\t" << boardArray[4] << "\t|\t" << boardArray[5] << "\t\n";
 	cout << "\t\t|\t\t|\n";
 	cout << "------------------------------------------------\n";
-	cout << "\t\t|\t\t|\n";
+	
+	cout << "6\t\t|7\t\t|8\n"; // numbering for the bottom row
 	cout << "\t" << boardArray[6] << "\t|\t" << boardArray[7] << "\t|\t" << boardArray[8] << "\t\n";
 	cout << "\t\t|\t\t|\n";
 
