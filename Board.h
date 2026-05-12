@@ -19,6 +19,7 @@ private:
     };
 public:
   Board();
+  void getMultiplayer() {return multiplayer;}
   void gameEnd(char result);
   void changeTurn();
   void showBoard();
