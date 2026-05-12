@@ -19,7 +19,7 @@ private:
     };
 public:
   Board();
-  char resetboardArray(int x) {boardArray[x] = ' ';}
+  void resetboardArray(int x) {boardArray[x] = ' ';}
   bool getMultiplayer() {return multiplayer;}
   char getCurrent() {return current;}
   void gameEnd(char result);
