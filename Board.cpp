@@ -10,6 +10,7 @@ Board::Board()
 	current = 'X';
 	opponent = 'O';
 	multiplayer = false;
+	playerAnswer = '0';
 	for (int x = 0; x < 9; x++) boardArray[x] = ' ';
 }
 
