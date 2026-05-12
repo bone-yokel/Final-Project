@@ -41,9 +41,9 @@ int main()
             // validation to make sure the spot is on the board
             if (choice < 0 || choice > 8) {
                 cout << "Invalid spot! Please choose 0-8." << endl;
-                continue; 
+                continue;
             }
-            
+
             board.makeMove(choice);
         }
         else
@@ -56,25 +56,9 @@ int main()
         // Gotta show the user the board
         board.showBoard();
         //check for game end
-        board.checkGameEnd();
+        gameOver = board.checkGameEnd();
         // Move on with the turn
         board.changeTurn();
-
-        char response;
-        cout << "Do you wish to play another game? (y/n): ";
-        cin >> response;
-
-        if (response == 'y' || response == 'Y') {
-            gameOver = false;
-            //reset booard
-            for (int c = 0; c <= 8; c++) {
-                board.resetboardArray(c);
-            }
-        }
-        else {
-        gameOver = true;
-        cout << "Thanks for playing!" << endl;
-        }
     }
 
     return 0;
