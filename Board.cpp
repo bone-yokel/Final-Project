@@ -79,6 +79,11 @@ void Board::showBoard()
 	
 }
 
+/*
+* void function that prints the result of the game
+* takes char result argument
+* -Ross
+*/
 void Board::gameEnd(char result)
 {
 	if (result == 'X') cout << endl << "X won the game!";
