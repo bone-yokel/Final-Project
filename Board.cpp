@@ -56,8 +56,10 @@ void Board::changeTurn()
 	}
 }
 
-//prints the current state of the board
-//Bones
+/*
+* void function that prints the current state of the board
+* -Bones
+*/
 void Board::showBoard()
 {
 	cout << "0\t\t|1\t\t|2\n"; // numbering for the top row
