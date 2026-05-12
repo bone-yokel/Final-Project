@@ -3,8 +3,10 @@
 #include "Board.h"
 using namespace std;
 
-//constructor
-//Bones
+/*
+* Default constructor for Board Class
+* -Bones
+*/
 Board::Board()
 {
 	current = 'X';
