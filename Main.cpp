@@ -33,7 +33,7 @@ int main()
     //Srujan
     while (!gameOver)
     {
-        if (board.multiplayer || (!board.multiplayer && board.current == 'X'))
+        if (board.getMultiplayer() || (!board.getMultiplayer() && board.getCurrent() == 'X'))
         {
             cout << "\nPlayer " << board.current << ", enter your move (0-8): ";
             cin >> choice;
