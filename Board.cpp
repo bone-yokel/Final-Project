@@ -242,7 +242,7 @@ int Board::findFork(char symbol)
             if (winningMoves >= 2) return i; // return after checking all x spots
         }
     }
-    return -1; // return -1 to indicate no fork being found
+    return 000; // return -1 to indicate no fork being found
 }
 }
 
