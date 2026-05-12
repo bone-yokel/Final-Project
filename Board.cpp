@@ -3,18 +3,23 @@
 #include "Board.h"
 using namespace std;
 
-//constructor
-//Bones
+/*
+* Default constructor for Board Class
+* -Bones
+*/
 Board::Board()
 {
 	current = 'X';
 	opponent = 'O';
 	multiplayer = false;
-	playerAnswer = '0';
 	for (int x = 0; x < 9; x++) boardArray[x] = ' ';
 }
 
-//gets player count
+/*
+* void function to get player count from user,
+* validates input
+* -Ross
+*/
 void Board::playerCount()
 {
 	cout << "Will you be playing with another person? Y/N: ";
@@ -33,8 +38,10 @@ void Board::playerCount()
 	else multiplayer = false;
 }
 
-//Swaps the symbols of current and opponenet players
-//Srujan
+/*
+* void function that swaps the symbols of the two players to signify the end of their turn
+* -Srujan
+*/
 void Board::changeTurn()
 {
 	if (current == 'X')
@@ -49,8 +56,10 @@ void Board::changeTurn()
 	}
 }
 
-//prints the current state of the board
-//Bones
+/*
+* void function that prints the current state of the board
+* -Bones
+*/
 void Board::showBoard()
 {
 	cout << "0\t\t|1\t\t|2\n"; // numbering for the top row
@@ -70,6 +79,12 @@ void Board::showBoard()
 
 }
 
+
+/*
+* void function that prints the result of the game
+* takes char result argument
+* -Ross
+*/
 void Board::gameEnd(char result)
 {
 	if (result == 'X') cout << endl << "X won the game!";
@@ -77,8 +92,11 @@ void Board::gameEnd(char result)
 	else cout << endl << "The game ended in a draw!";
 }
 
-//Cheks if the game has ended and passes for who wins
-//Srujan
+
+/*
+* void function that checks the board to see if the game is over
+* -Srujan
+*/
 bool Board::checkGameEnd()
 {
 	bool gameOver = false;
@@ -113,11 +131,15 @@ bool Board::checkGameEnd()
 		}
 		else return false;
 		fullTiles = 0;
-	
+
 	}
 }
-//finds and makes the best possible move for the current player
-//Bones
+
+
+/*
+* void function the finds and makes the best possible move, using a series of 7 steps, for the current player
+* -Bones
+*/
 void Board::bestMove()
 {
 	bool moveFound = false;
@@ -212,8 +234,13 @@ void Board::bestMove()
 	}
 }
 
-//Determines if placing a symbol at a position will win the game
-//Bones
+
+/*
+* bool function that determines if placing a symbol at any single position on the board will win the game
+* takes char symbol and int position arguments
+* returns true or false based of whether there is a winning move available
+* -Bones
+*/
 bool Board::isWinning(char symbol, int position) {
 	boardArray[position] = symbol;
 	for (int x = 0; x < 8; x++)
