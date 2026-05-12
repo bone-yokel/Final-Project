@@ -28,11 +28,9 @@ int main()
     bool gameOver = false;
     int choice;
 
-    /*
-    Checks to see if the game is over.
-    Figures out what the game will be and who's playing. Then, it will go through turns and check for a win until someone wins oor a draw happens.
-    Srujna
-    */
+    //Checks to see if the game is over.
+    //Figures out what the game will be and who's playing. Then, it will go through turns and check for a win until someone wins oor a draw happens.
+    //Srujan
     while (!gameOver)
     {
         if (board.multiplayer || (!board.multiplayer && board.current == 'X'))
